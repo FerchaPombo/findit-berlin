@@ -39,11 +39,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     "allauth",
-    "allouth.account",
+    "allauth.account",
     "allauth.socialaccount",
     "crispy_forms",
-    "summernote",
-    "blog",
+    "django_summernote",
+    'storages',
+    'cloudinary',
+    "myblog",
 ]
 
 MIDDLEWARE = [
@@ -55,6 +57,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.contrib.staticfiles",
+    "allauth.account.middleware.AccountMiddleware",
     
 ]
 
@@ -147,7 +150,9 @@ CLOUDINARY_STORAGE = {
     'API_SECRET' : '1kpz9tatZXSquN8WxSWR1xU4Vno',
 
 }
+
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 # Add leaflet settings
 LEAFLET_CONFIG = {

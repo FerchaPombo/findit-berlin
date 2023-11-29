@@ -21,3 +21,11 @@ class Post(model.Models):
         from django.urls import reverse
         return reverse ('post_detail', args=[str(self.slug)])
 
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    author = models.CharField(max_length=50)
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+
+
+
