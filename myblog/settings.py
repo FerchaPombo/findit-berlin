@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
+    "allauth",
+    "allouth.account",
+    "allauth.socialaccount",
+    "crispy_forms",
+    "summernote",
+    "blog",
 ]
 
 MIDDLEWARE = [
@@ -48,13 +55,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.contrib.staticfiles",
-    "django.contrib.sites",
-    "allauth",
-    "allouth.account",
-    "allauth.socialaccount",
-    "crispy_forms",
-    "summernote",
-    "blog",
+    
 ]
 
 ROOT_URLCONF = "myblog.urls"
